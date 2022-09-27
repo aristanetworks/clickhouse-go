@@ -41,7 +41,7 @@ var (
 )
 
 func init() {
-	sql.Register("clickhouse", &bootstrap{})
+	sql.Register("clickhouse-v1", &bootstrap{})
 	go func() {
 		for tick := time.Tick(time.Second); ; {
 			select {
